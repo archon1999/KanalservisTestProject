@@ -4,7 +4,22 @@
 
 ## Как запустить?
 
-Перед сборкой создайте файл <code>.env</code> в папке <b>server</b>
+Перед сборкой создайте файл <code>.env</code> в папке <b>server</b> со следующими переменными:
+<code>
+DJANGO_SECRET_KEY
+DJANGO_DEBUG
+
+POSTGRES_DB=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_HOST=db
+POSTGRES_PORT=5432
+
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_USER_ID=
+</code>
+
+
 # Для сборки
 <code>docker-compose up -d --build</code>
 
