@@ -1,5 +1,8 @@
+import os
+
 import requests
 from bs4 import BeautifulSoup
+from telebot import TeleBot
 
 
 def parse_ruble_exchange_rate(html):
@@ -16,3 +19,19 @@ def get_ruble_exchange_rate():
     if response.ok:
         html = response.text
         return parse_ruble_exchange_rate(html)
+
+
+def send_notification_about_expiration(order):
+    bot = TeleBot(token=os.getenv('TELEGRAM_BOT_TOKEN'))
+    text = f'''
+⚠️ <b>Уведомление о просрочке:</b>
+
+🧾 <i>Информация про заказ</i>
+
+<b>ℹ️ Номер заказа:</b> <i>{order.order_id}</i>
+<b>💲 Стоимость:</b> <i>{order.cost}$</i>
+<b>📅 Срок доставки:</b> <i>{order.delivery_time}</i>
+'''
+    chat_id = os.getenv('TELEGRAM_USER_ID')
+    bot.send_message(chat_id, text,
+                     parse_mode='HTML')

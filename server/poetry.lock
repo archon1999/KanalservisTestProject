@@ -612,6 +612,26 @@ python-versions = ">=3.6.8"
 diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
+name = "pyTelegramBotAPI"
+version = "4.7.0"
+description = "Python Telegram bot api."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+requests = "*"
+
+[package.extras]
+PIL = ["Pillow"]
+aiohttp = ["aiohttp"]
+aioredis = ["aioredis"]
+fastapi = ["fastapi"]
+json = ["ujson"]
+redis = ["redis (>=3.4.1)"]
+uvicorn = ["uvicorn"]
+
+[[package]]
 name = "python-dateutil"
 version = "2.8.2"
 description = "Extensions to the standard Python datetime module"
@@ -901,7 +921,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "8c8166d9f5187ed0a1bf2dcd48844bc068155eb9fcd6ecd131e45cef6adf9938"
+content-hash = "ac12f68482b006000cb505cfe175de98fbeff181b5e67aadcb3b6d63ac22418b"
 
 [metadata.files]
 ansicon = [
@@ -1267,6 +1287,9 @@ pyOpenSSL = [
 pyparsing = [
     {file = "pyparsing-3.0.9-py3-none-any.whl", hash = "sha256:5026bae9a10eeaefb61dab2f09052b9f4307d44aee4eda64b309723d8d206bbc"},
     {file = "pyparsing-3.0.9.tar.gz", hash = "sha256:2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"},
+]
+pyTelegramBotAPI = [
+    {file = "pyTelegramBotAPI-4.7.0.tar.gz", hash = "sha256:b15bb9d7c07e3c34a95ba32162d35690fa70b93e3bd557c6b830eda4becca3f5"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},

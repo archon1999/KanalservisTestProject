@@ -1,11 +1,14 @@
 import json
+import traceback
 
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
+from django.utils import timezone
 from websocket import create_connection
 
 from ws.constants import OrderEvent
 from .models import Order
+from .utils import send_notification_about_expiration
 
 
 @receiver(post_save, sender=Order)
@@ -14,6 +17,12 @@ def order_post_save_handler(instance, created, **kwargs):
         event = OrderEvent.Created.value
     else:
         event = OrderEvent.Updated.value
+
+    if instance.delivery_time < timezone.now().date():
+        try:
+            send_notification_about_expiration(instance)
+        except Exception:
+            traceback.print_exc()
 
     data = {
         'data': instance.id,
