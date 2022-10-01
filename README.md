@@ -4,19 +4,19 @@
 
 ## Как запустить?
 
-Перед сборкой создайте файл <code>.env</code> в папке <b>server</b> со следующими переменными:
+Перед сборкой создайте файл <code>.env</code> в папке <b>server</b> со следующими переменными: <br>
 <code>
-DJANGO_SECRET_KEY
-DJANGO_DEBUG
+DJANGO_SECRET_KEY<br>
+DJANGO_DEBUG<br>
 
-POSTGRES_DB=postgres
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-POSTGRES_HOST=db
-POSTGRES_PORT=5432
+POSTGRES_DB=postgres<br>
+POSTGRES_USER=postgres<br>
+POSTGRES_PASSWORD=postgres<br>
+POSTGRES_HOST=db<br>
+POSTGRES_PORT=5432<br>
 
-TELEGRAM_BOT_TOKEN=
-TELEGRAM_USER_ID=
+TELEGRAM_BOT_TOKEN<br>
+TELEGRAM_USER_ID<br>
 </code>
 
 
