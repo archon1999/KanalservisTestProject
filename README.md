@@ -23,6 +23,8 @@ Django
 Кому отправлять уведомление
 * <code>TELEGRAM_USER_ID</code><br>
 
+Укажите <code>IP_ADDRESS</code> сервера, где запускается проект в папке <b>client/src/environments/environment.prod.ts</b>
+
 
 ### Сборка и запуск
 <code>docker-compose up -d --build</code><br>
