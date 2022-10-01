@@ -30,7 +30,7 @@ def order_post_save_handler(instance, created, **kwargs):
         'event': 'order-sender',
     }
     try:
-        ws = create_connection("ws://0.0.0.0:8880/ws")
+        ws = create_connection("ws://daphne:8008/ws")
         ws.send(json.dumps(data))
         ws.close()
     except Exception:
@@ -45,7 +45,7 @@ def order_post_delete_handler(instance, **kwargs):
         'event': 'order-sender',
     }
     try:
-        ws = create_connection("ws://0.0.0.0:8880/ws")
+        ws = create_connection("ws://daphne:8008/ws")
         ws.send(json.dumps(data))
         ws.close()
     except Exception:
