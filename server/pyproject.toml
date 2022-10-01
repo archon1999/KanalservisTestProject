@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "KanalservisTestProject"
+authors = ["Nazarbek"]
+description = ""
+documentation = ""
+homepage = ""
+keywords = [""]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/archon1999/KanalservisTestProject.git"
+version = "1.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "*"
+python-dotenv = "*"
+django-class-settings = "*"
+django-cors-headers = "*"
+django_q = "*"
+django-filter = "*"
+djangorestframework = "*"
+channels = "*"
+psycopg2 = "*"
+djangorestframework_camel_case = "*"
+whitenoise = "*"
+pygsheets = "*"
+websocket-client = "*"
+django-solo = "*"
+requests = "*"
+bs4 = "*"
+lxml = "*"
+gunicorn = "*"
+daphne = "*"
