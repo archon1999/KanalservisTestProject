@@ -29,9 +29,12 @@ def order_post_save_handler(instance, created, **kwargs):
         'event_type': event,
         'event': 'order-sender',
     }
-    ws = create_connection("ws://0.0.0.0:8880/ws")
-    ws.send(json.dumps(data))
-    ws.close()
+    try:
+        ws = create_connection("ws://0.0.0.0:8880/ws")
+        ws.send(json.dumps(data))
+        ws.close()
+    except Exception:
+        traceback.print_exc()
 
 
 @receiver(post_delete, sender=Order)
@@ -41,6 +44,9 @@ def order_post_delete_handler(instance, **kwargs):
         'event_type': OrderEvent.Deleted.value,
         'event': 'order-sender',
     }
-    ws = create_connection("ws://0.0.0.0:8880/ws")
-    ws.send(json.dumps(data))
-    ws.close()
+    try:
+        ws = create_connection("ws://0.0.0.0:8880/ws")
+        ws.send(json.dumps(data))
+        ws.close()
+    except Exception:
+        traceback.print_exc()
