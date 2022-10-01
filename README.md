@@ -5,9 +5,9 @@
 ## Как запустить?
 
 Перед сборкой создайте файл <code>.env</code> в папке <b>server</b> со следующими переменными: <br>
-<code>DJANGO_SECRET_KEY</code>
-<code>DJANGO_DEBUG</code>
-<code>POSTGRES_DB=postgres</code>
+<code>DJANGO_SECRET_KEY</code><br>
+<code>DJANGO_DEBUG</code><br>
+<code>POSTGRES_DB=postgres</code><br>
 <code>POSTGRES_USER=postgres</code>
 <code>POSTGRES_PASSWORD=postgres</code>
 <code>POSTGRES_HOST=db</code>
