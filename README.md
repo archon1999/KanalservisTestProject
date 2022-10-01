@@ -4,7 +4,7 @@
 
 ## Как запустить?
 
-Перед сборкой создайте файл <code>.env</code> в папке <b>server</b> со следующими переменными: <br><br>
+Перед сборкой создайте файл <code>.env</code> в папке <b>server</b> со следующими переменными: <br>
 * <code>DJANGO_SECRET_KEY</code><br>
 * <code>DJANGO_DEBUG</code><br>
 * <code>POSTGRES_DB=postgres</code><br>
@@ -16,12 +16,24 @@
 * <code>TELEGRAM_USER_ID</code><br>
 
 
-# Для сборки
-<code>docker-compose up -d --build</code>
+### Сборка и запуск
+<code>docker-compose up -d --build</code><br>
 
+После сборки сделать миграцию данных:
+<code>docker-compose exec server poetry run python manage.py migrate</code>
 
-docker-compose exec server poetry run python manage.py migrate
-docker-compose exec server poetry run python manage.py createsuperuser
-docker-compose exec server poetry run python create_scheduler.py
+Для создания суперпользователя для входа в страницу администрации:
+<code>docker-compose exec server poetry run python manage.py createsuperuser</code>
 
-## 
+Создайте объекты для планировщика задач:
+<code>docker-compose exec server poetry run python create_scheduler.py</code><br>
+
+Есть два запланированных задач:
+  1. <b>update-data</b> - Обновление данных в каждую минуту.
+  2. <b>update-ruble-exchange-rate<b> - Обновление курса валюты, рубля к доллару, один раз в день.
+
+  
+После сборки и запуска запустятся три сервера на портах <code>8888</code>, <code>8880</code> и <code>4200</code>:
+  1. <b>gunicorn</b> - WSGI-сервер.
+  2. <b>daphne</b> - ASGI-сервер. Для использования вебсокета.
+  3. <b>nginx</b> - SPA-приложение, написанное на <b>Angular</b>.
