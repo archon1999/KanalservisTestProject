@@ -47,3 +47,5 @@ Django
   1. <b>gunicorn</b> - WSGI-сервер.
   2. <b>daphne</b> - ASGI-сервер. Для использования вебсокета.
   3. <b>nginx</b> - SPA-приложение, написанное на <b>Angular</b>.
+  
+ Ссылка на гугл-таблицу: <code>https://docs.google.com/spreadsheets/d/1LSNM1-_k-iPJVaNvcDuwM0LMTPj8xjFlbxRe1Jx7BkA</code>
