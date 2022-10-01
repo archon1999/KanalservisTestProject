@@ -8,13 +8,11 @@
 <code>
 DJANGO_SECRET_KEY<br>
 DJANGO_DEBUG<br>
-
 POSTGRES_DB=postgres<br>
 POSTGRES_USER=postgres<br>
 POSTGRES_PASSWORD=postgres<br>
 POSTGRES_HOST=db<br>
 POSTGRES_PORT=5432<br>
-
 TELEGRAM_BOT_TOKEN<br>
 TELEGRAM_USER_ID<br>
 </code>
