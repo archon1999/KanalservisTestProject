@@ -8,12 +8,12 @@
 <code>DJANGO_SECRET_KEY</code><br>
 <code>DJANGO_DEBUG</code><br>
 <code>POSTGRES_DB=postgres</code><br>
-<code>POSTGRES_USER=postgres</code>
-<code>POSTGRES_PASSWORD=postgres</code>
-<code>POSTGRES_HOST=db</code>
-<code>POSTGRES_PORT=5432</code>
-<code>TELEGRAM_BOT_TOKEN</code>
-<code>TELEGRAM_USER_ID</code>
+<code>POSTGRES_USER=postgres</code><br>
+<code>POSTGRES_PASSWORD=postgres</code><br>
+<code>POSTGRES_HOST=db</code><br>
+<code>POSTGRES_PORT=5432</code><br>
+<code>TELEGRAM_BOT_TOKEN</code><br>
+<code>TELEGRAM_USER_ID</code><br>
 
 
 # Для сборки
