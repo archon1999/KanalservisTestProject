@@ -7,8 +7,8 @@
 Перед сборкой создайте файл <code>.env</code> в папке <b>server</b> со следующими переменными: <br>
 
 Django
-* <code>DJANGO_SECRET_KEY</code><br> 1|0
-* <code>DJANGO_DEBUG</code><br>
+* <code>DJANGO_SECRET_KEY</code><br>
+* <code>DJANGO_DEBUG</code>1|0<br>
 
 Данные для БД
 * <code>POSTGRES_DB=postgres</code><br>
